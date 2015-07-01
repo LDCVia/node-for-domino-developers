@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  div
+    a(href="/") Home
+
+  ul
+    each doc in data
+      li
+        a(href="/domino/" + doc['@unid']) #{doc['$117']}

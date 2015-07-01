@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+label {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.field {
+  margin-top: 5px;
+}
