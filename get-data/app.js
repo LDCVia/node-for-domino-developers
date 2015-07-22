@@ -1,0 +1,1 @@
+var rest = require('restler');rest.get('http://dev.londc.com/demos/discussion.nsf/api/data/collections').on('complete', function(data, response){  console.log(data);});
