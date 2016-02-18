@@ -1,12 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  div
-    a(href="/domino") < Back
-  br
+  div.container
+    h1= title
+    div.btn-group.pull-right
+      a.btn.btn-default(href="/domino/#{data.MainID}/edit") Edit
+    ul.breadcrumb
+      li
+        a(href="/") Home
+      li
+        a(href="/domino") View
 
-  each field, fieldname in data
-    div.field
-      label #{fieldname}
-      div #{field}
+    form
+      each field, fieldname in data
+        if(fieldname.indexOf("@") == -1)
+          div.form-group
+            label #{fieldname}
+            p !{field}

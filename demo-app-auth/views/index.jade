@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    h1= title
+    div.well Welcome to #{title}
 
-  a(href="/domino") View Domino Data
+    a.btn.btn-default(href="/domino") View Domino Data

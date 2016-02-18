@@ -1,13 +1,12 @@
 extends layout
 
 block content
-  form.form-signin(role='form' action="/login" method="POST")
-    h2.form-signin-heading Please sign in
-    input.form-control(name='email', id='email', type='email', placeholder='Email address', required='', autofocus='')
-    input.form-control(name='password', id='password', type='password', placeholder='Password', required='')
-    if(error)
-      div.alert.alert-danger
-        | #{error}
-    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
-    a.btn.btn-default.btn-block(href="https://eu.ldcvia.com/login/forgot") Forget your password?
-    a.btn.btn-default.btn-block(href="https://eu.ldcvia.com/register") Don't have an account? Register now
+  div.col-md-4.col-md-offset-4
+    form.form-signin(role='form' action="/login" method="POST", autocomplete="off")
+      h2.form-signin-heading Please sign in
+      input.form-control(name='username', id='username', placeholder='Username', required='', autofocus='')
+      input.form-control(name='password', id='password', type='password', placeholder='Password', required='')
+      if(error)
+        div.alert.alert-danger
+          | #{error}
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in

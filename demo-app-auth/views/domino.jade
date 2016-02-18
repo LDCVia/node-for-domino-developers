@@ -1,11 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  div
-    a(href="/") Home
-
-  ul
-    each doc in data
+  div.container
+    h1= title
+    div.btn-group.pull-right
+      a.btn.btn-default(href="/create") New Document
+    ul.breadcrumb
       li
-        a(href="/domino/" + doc['@unid']) #{doc['$117']}
+        a(href="/") Home
+
+    ul.list-group
+      each doc in data
+        li.list-group-item
+          a(href="/domino/" + doc['@unid']) #{doc['$117']}

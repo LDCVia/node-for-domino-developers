@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.container
+    h1= title
+    form(action="/domino/#{data.MainID}/edit", role="form", method="POST")
+      div.btn-group.pull-right
+        input.btn.btn-primary(type="submit" value="Save")
+        a.btn.btn-default(href="/domino/#{data.MainID}") Cancel
+      ul.breadcrumb
+        li
+          a(href="/") Home
+        li
+          a(href="/domino") View
+
+      div.form-group
+        label Subject
+        input.form-control(name="Subject" id="Subject" value="#{data.Subject}")
+      div.form-group
+        label Body
+        textarea.form-control(name="Body" id="Body") #{data.Body}

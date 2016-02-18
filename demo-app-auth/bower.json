@@ -1,0 +1,21 @@
+{
+  "name": "demo-app-auth",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Matt White <matt@ldcvia.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LonDC/node-for-domino-developers",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
