@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  div
+    a(href="/domino") < Back
+  br
+
+  each field, fieldname in data
+    div.field
+      label #{fieldname}
+      div #{field}
